@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:component[@name='BPELProcessReadFile/bpelprocessreadfile_client']</loc>
+      <line/>
+      <col/>
+      <file>/home/oracle/jdeveloper/mywork/Flux_SOA_Process/LireFichier/SOA/composite.xml</file>
+      <name>/home/oracle/jdeveloper/mywork/Flux_SOA_Process/LireFichier/SOA/composite.xml</name>
+      <fix/>
+      <msg>The service "bpelprocessreadfile_client" exposed by component "BPELProcessReadFile" is not wired to/used by any other component.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>81</line>
+      <col/>
+      <file>BPEL/BPELProcessReadFile.bpel</file>
+      <name>BPEL/BPELProcessReadFile.bpel</name>
+      <fix>Add a predicate to select an element from the sequence.</fix>
+      <msg>The XPath segment "child::ns3:Facture" selects a sequence of elements - a predicate MAY be needed to correctly select an element.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line>85</line>
+      <col/>
+      <file>BPEL/BPELProcessReadFile.bpel</file>
+      <name>BPEL/BPELProcessReadFile.bpel</name>
+      <fix>Add a predicate to select an element from the sequence.</fix>
+      <msg>The XPath segment "child::ns3:Facture" selects a sequence of elements - a predicate MAY be needed to correctly select an element.</msg>
+   </Fault>
+</Faults>

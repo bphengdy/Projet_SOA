@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org"
+            targetNamespace="http://www.example.org" elementFormDefault="qualified">
+<xsd:element name="createFactureRequest">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element name="employee" type="FactureType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="createFactureResponse">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name="FactureType">
+  <xsd:sequence>
+    <xsd:element name="id" type="xsd:integer" minOccurs="0"/>
+    <xsd:element name="nom" type="xsd:string"/>
+    <xsd:element name="montant" type="xsd:integer"/>
+  </xsd:sequence>
+</xsd:complexType>
+  
+  
+</xsd:schema>
+
