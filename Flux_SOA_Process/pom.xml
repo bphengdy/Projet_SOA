@@ -14,5 +14,6 @@
     	<module>Flux_Test3</module>
     	<module>Flux_Test4</module>
     	<module>Flux_Test5</module>
+    	<module>FluxFacture</module>
     </modules>
 </project>

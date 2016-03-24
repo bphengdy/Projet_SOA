@@ -5,9 +5,9 @@
    <iconize/>
    <partnerlink_locations>
       <partnerlink name="ReadFile" x="15" y="90" side="left"/>
-      <partnerlink name="WriteDatabase" x="564" y="284" side="right"/>
+      <partnerlink name="WriteToDB" x="656" y="284" side="right"/>
    </partnerlink_locations>
-   <graph_layout viewport="0,150,686,242" show_swimlanes="true">
+   <graph_layout viewport="0,150,772,238" show_swimlanes="true">
       <layout_item collapsed="false" xpath="/process" type="process" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence" type="sequence"/>
    </graph_layout>

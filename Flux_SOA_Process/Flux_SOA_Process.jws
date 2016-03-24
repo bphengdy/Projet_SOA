@@ -28,6 +28,7 @@
    <list n="listOfChildren">
       <hash><url n="URL" path="Flux_Test4/Flux_Test4.jpr"/></hash>
       <hash><url n="URL" path="Flux_Test5/Flux_Test5.jpr"/></hash>
+      <hash><url n="URL" path="FluxFacture/FluxFacture.jpr"/></hash>
       <hash><url n="URL" path="LireFichier/LireFichier.jpr"/></hash>
    </list>
 </jws:workspace>

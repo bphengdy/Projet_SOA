@@ -65,7 +65,7 @@
       <string v="oracle.sb.tooling.ide.core.projects.SbProjectSettings/sbContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/cepContentSet"/>
    </list>
-   <value n="defaultPackage" v="flux_test5"/>
+   <value n="defaultPackage" v="fluxfacture"/>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="Maven"/>
@@ -107,7 +107,7 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="Flux_Test5">
+         <hash n="FluxFacture">
             <hash n="archiveOptions">
                <value n="hasManifest" v="false"/>
             </hash>
@@ -182,21 +182,21 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/sca_Flux_Test5${composite.revision_id}.jar"/>
+            <url n="jarURL" path="deploy/sca_FluxFacture${composite.revision_id}.jar"/>
             <value n="profileClass" v="oracle.tip.tools.ide.fabric.deploy.sar.SarProfile"/>
-            <value n="profileName" v="Flux_Test5"/>
+            <value n="profileName" v="FluxFacture"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="Flux_Test5"/>
+         <string v="FluxFacture"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
       <url n="pomfileURL" path="pom.xml"/>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="Flux_SOA_Process-Flux_Test5-webapp"/>
-      <value n="j2eeWebContextRoot" v="Flux_SOA_Process-Flux_Test5-context-root"/>
+      <value n="j2eeWebAppName" v="Flux_SOA_Process-FluxFacture-webapp"/>
+      <value n="j2eeWebContextRoot" v="Flux_SOA_Process-FluxFacture-context-root"/>
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="javaContentSet">
@@ -285,6 +285,4 @@
       </hash>
    </hash>
    <value n="SCA_BPEL_FOLDER_PROPERTY_NAME" v="BPEL/"/>
-   <value n="SOA_TRANSFORMATION_FOLDER_NAME" v="Transformations/"/>
-   <value n="SOA_WSDL_FOLDER_NAME" v="WSDLs/"/>
 </jpr:project>

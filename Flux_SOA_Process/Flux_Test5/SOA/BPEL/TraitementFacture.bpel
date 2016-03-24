@@ -3,19 +3,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   Oracle JDeveloper BPEL Designer 
   
-  Created: Wed Mar 23 07:12:49 PDT 2016
+  Created: Wed Mar 23 14:29:53 PDT 2016
   Author:  oracle
   Type: BPEL 2.0 Process
   Purpose: Empty BPEL Process
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -->
-<process name="BPELProcess1"
-               targetNamespace="http://xmlns.oracle.com/Flux_SOA_Process/Flux_Test5/BPELProcess1"
+<process name="TraitementFacture"
+               targetNamespace="http://xmlns.oracle.com/Flux_SOA_Process/Flux_Test5/TraitementFacture"
                xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
-               xmlns:client="http://xmlns.oracle.com/Flux_SOA_Process/Flux_Test5/BPELProcess1"
+               xmlns:client="http://xmlns.oracle.com/Flux_SOA_Process/Flux_Test5/TraitementFacture"
                xmlns:ora="http://schemas.oracle.com/xpath/extension"
                xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
-         xmlns:ns1="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadFile"
+         xmlns:ns1="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadingFile"
          xmlns:ns2="http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/Flux_Test5/WriteDatabase"
          xmlns:bpelx="http://schemas.oracle.com/bpel/extension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns:ns3="http://TargetNamespace.com/ReadingFile"
@@ -29,10 +29,10 @@
      services integrated within this business process                  
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   -->
-  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadFile"
-          location="../WSDLs/ReadFile.wsdl" importType="http://schemas.xmlsoap.org/wsdl/" ui:processWSDL="true"/>
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadingFile"
+          location="../WSDLs/ReadingFile.wsdl" importType="http://schemas.xmlsoap.org/wsdl/" ui:processWSDL="true"/>
   <partnerLinks>
-    <partnerLink name="ReadFile" partnerLinkType="ns1:Read_plt" myRole="Read_role"/>
+    <partnerLink name="ReadingFile" partnerLinkType="ns1:Read_plt" myRole="Read_role"/>
     <partnerLink name="WriteDatabase" partnerLinkType="ns2:WriteDatabase_plt" partnerRole="WriteDatabase_role"/>
   </partnerLinks>
   <variables>
@@ -40,23 +40,18 @@
     <variable name="Invoke1_insert_InputVariable" messageType="ns2:FactureCollection_msg"/>
   </variables>
   <sequence name="main">
-    <receive name="Receive1" createInstance="yes" partnerLink="ReadFile" portType="ns1:Read_ptt" operation="Read"
+    <receive name="Receive1" partnerLink="ReadingFile" portType="ns1:Read_ptt" operation="Read" createInstance="yes"
              variable="Receive1_Read_InputVariable"/>
-    <assign name="Assign1">
+    <assign name="Transformation1">
+      <bpelx:annotation>
+        <bpelx:pattern patternName="bpelx:transformation"></bpelx:pattern>
+      </bpelx:annotation>
       <copy>
-        <from>$Receive1_Read_InputVariable.body/ns3:Facture/ns3:C1</from>
-        <to>$Invoke1_insert_InputVariable.FactureCollection/ns4:Facture/ns4:id</to>
-      </copy>
-      <copy>
-        <from>$Receive1_Read_InputVariable.body/ns3:Facture/ns3:C2</from>
-        <to>$Invoke1_insert_InputVariable.FactureCollection/ns4:Facture/ns4:nom</to>
-      </copy>
-      <copy>
-        <from>$Receive1_Read_InputVariable.body/ns3:Facture/ns3:C3</from>
-        <to>$Invoke1_insert_InputVariable.FactureCollection/ns4:Facture/ns4:montant</to>
+        <from>ora:doXSLTransformForDoc("../Transformations/Transformation_2.xsl", $Receive1_Read_InputVariable.body)</from>
+        <to variable="Invoke1_insert_InputVariable" part="FactureCollection"/>
       </copy>
     </assign>
-    <invoke name="Invoke1" partnerLink="WriteDatabase" portType="ns2:WriteDatabase_ptt"
-            operation="insert" inputVariable="Invoke1_insert_InputVariable" bpelx:invokeAsDetail="no"/>
+    <invoke name="Invoke1" bpelx:invokeAsDetail="no" partnerLink="WriteDatabase" portType="ns2:WriteDatabase_ptt"
+            operation="insert" inputVariable="Invoke1_insert_InputVariable"/>
   </sequence>
 </process>

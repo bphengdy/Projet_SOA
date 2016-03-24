@@ -1,12 +1,12 @@
 <wsdl:definitions
-     name="ReadFile"
-     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadFile"
-     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadFile"
+     name="ReadingFile"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadingFile"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/Flux_Test5/ReadingFile"
      xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
      xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
      xmlns:pc="http://xmlns.oracle.com/pcbpel/"
-     xmlns:imp1="http://TargetNamespace.com/ReadingFile"
      xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:imp1="http://TargetNamespace.com/ReadingFile"
     >
   <plt:partnerLinkType name="Read_plt" >
     <plt:role name="Read_role" >
@@ -15,7 +15,7 @@
   </plt:partnerLinkType>
     <wsdl:types>
       <schema xmlns="http://www.w3.org/2001/XMLSchema" >
-        <import namespace="http://TargetNamespace.com/ReadingFile" schemaLocation="../Schemas/nxsd_schema1.xsd" />
+        <import namespace="http://TargetNamespace.com/ReadingFile" schemaLocation="../Schemas/nxsd_schema2.xsd" />
       </schema>
     </wsdl:types>
     <wsdl:message name="Read_msg">
