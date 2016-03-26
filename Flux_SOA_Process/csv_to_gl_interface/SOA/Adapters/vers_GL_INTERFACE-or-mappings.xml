@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd">
+   <name>vers_GL_INTERFACE-OR</name>
+   <class-mapping-descriptors>
+      <class-mapping-descriptor xsi:type="object-relational-class-mapping-descriptor">
+         <class>vers_GL_INTERFACE.GlInterface</class>
+         <alias>GL_INTERFACE</alias>
+         <primary-key>
+            <field name="ROWID" xsi:type="column"/>
+         </primary-key>
+         <events/>
+         <querying>
+            <queries>
+               <query name="vers_GL_INTERFACESelect" xsi:type="read-all-query">
+                  <reference-class>vers_GL_INTERFACE.GlInterface</reference-class>
+                  <container xsi:type="list-container-policy">
+                     <collection-type>java.util.Vector</collection-type>
+                  </container>
+               </query>
+            </queries>
+         </querying>
+         <attribute-mappings>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>status</attribute-name>
+               <field table="GL_INTERFACE" name="STATUS" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>setOfBooksId</attribute-name>
+               <field table="GL_INTERFACE" name="SET_OF_BOOKS_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>userJeSourceName</attribute-name>
+               <field table="GL_INTERFACE" name="USER_JE_SOURCE_NAME" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>userJeCategoryName</attribute-name>
+               <field table="GL_INTERFACE" name="USER_JE_CATEGORY_NAME" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>accountingDate</attribute-name>
+               <field table="GL_INTERFACE" name="ACCOUNTING_DATE" xsi:type="column"/>
+               <attribute-classification>java.sql.Timestamp</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>currencyCode</attribute-name>
+               <field table="GL_INTERFACE" name="CURRENCY_CODE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>dateCreated</attribute-name>
+               <field table="GL_INTERFACE" name="DATE_CREATED" xsi:type="column"/>
+               <attribute-classification>java.sql.Timestamp</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>createdBy</attribute-name>
+               <field table="GL_INTERFACE" name="CREATED_BY" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>actualFlag</attribute-name>
+               <field table="GL_INTERFACE" name="ACTUAL_FLAG" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>encumbranceTypeId</attribute-name>
+               <field table="GL_INTERFACE" name="ENCUMBRANCE_TYPE_ID" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>budgetVersionId</attribute-name>
+               <field table="GL_INTERFACE" name="BUDGET_VERSION_ID" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>currencyConversionDate</attribute-name>
+               <field table="GL_INTERFACE" name="CURRENCY_CONVERSION_DATE" xsi:type="column"/>
+               <attribute-classification>java.sql.Timestamp</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>userCurrencyConversionType</attribute-name>
+               <field table="GL_INTERFACE" name="USER_CURRENCY_CONVERSION_TYPE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>currencyConversionRate</attribute-name>
+               <field table="GL_INTERFACE" name="CURRENCY_CONVERSION_RATE" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>segment1</attribute-name>
+               <field table="GL_INTERFACE" name="SEGMENT1" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>segment2</attribute-name>
+               <field table="GL_INTERFACE" name="SEGMENT2" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>segment3</attribute-name>
+               <field table="GL_INTERFACE" name="SEGMENT3" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>segment4</attribute-name>
+               <field table="GL_INTERFACE" name="SEGMENT4" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>segment5</attribute-name>
+               <field table="GL_INTERFACE" name="SEGMENT5" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>enteredDr</attribute-name>
+               <field table="GL_INTERFACE" name="ENTERED_DR" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>enteredCr</attribute-name>
+               <field table="GL_INTERFACE" name="ENTERED_CR" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>accountedDr</attribute-name>
+               <field table="GL_INTERFACE" name="ACCOUNTED_DR" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>accountedCr</attribute-name>
+               <field table="GL_INTERFACE" name="ACCOUNTED_CR" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>transactionDate</attribute-name>
+               <field table="GL_INTERFACE" name="TRANSACTION_DATE" xsi:type="column"/>
+               <attribute-classification>java.sql.Timestamp</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>reference1</attribute-name>
+               <field table="GL_INTERFACE" name="REFERENCE1" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>reference2</attribute-name>
+               <field table="GL_INTERFACE" name="REFERENCE2" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>reference3</attribute-name>
+               <field table="GL_INTERFACE" name="REFERENCE3" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>reference4</attribute-name>
+               <field table="GL_INTERFACE" name="REFERENCE4" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>reference5</attribute-name>
+               <field table="GL_INTERFACE" name="REFERENCE5" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>groupId</attribute-name>
+               <field table="GL_INTERFACE" name="GROUP_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>jeBatchId</attribute-name>
+               <field table="GL_INTERFACE" name="JE_BATCH_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>periodName</attribute-name>
+               <field table="GL_INTERFACE" name="PERIOD_NAME" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>jeHeaderId</attribute-name>
+               <field table="GL_INTERFACE" name="JE_HEADER_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>jeLineNum</attribute-name>
+               <field table="GL_INTERFACE" name="JE_LINE_NUM" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>chartOfAccountsId</attribute-name>
+               <field table="GL_INTERFACE" name="CHART_OF_ACCOUNTS_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>functionalCurrencyCode</attribute-name>
+               <field table="GL_INTERFACE" name="FUNCTIONAL_CURRENCY_CODE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>codeCombinationId</attribute-name>
+               <field table="GL_INTERFACE" name="CODE_COMBINATION_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>dateCreatedInGl</attribute-name>
+               <field table="GL_INTERFACE" name="DATE_CREATED_IN_GL" xsi:type="column"/>
+               <attribute-classification>java.sql.Timestamp</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>warningCode</attribute-name>
+               <field table="GL_INTERFACE" name="WARNING_CODE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>statusDescription</attribute-name>
+               <field table="GL_INTERFACE" name="STATUS_DESCRIPTION" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>descrFlexErrorMessage</attribute-name>
+               <field table="GL_INTERFACE" name="DESCR_FLEX_ERROR_MESSAGE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>statAmount</attribute-name>
+               <field table="GL_INTERFACE" name="STAT_AMOUNT" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>requestId</attribute-name>
+               <field table="GL_INTERFACE" name="REQUEST_ID" xsi:type="column"/>
+               <attribute-classification>java.lang.Long</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>subledgerDocSequenceId</attribute-name>
+               <field table="GL_INTERFACE" name="SUBLEDGER_DOC_SEQUENCE_ID" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>subledgerDocSequenceValue</attribute-name>
+               <field table="GL_INTERFACE" name="SUBLEDGER_DOC_SEQUENCE_VALUE" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>ussglTransactionCode</attribute-name>
+               <field table="GL_INTERFACE" name="USSGL_TRANSACTION_CODE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>attribute1</attribute-name>
+               <field table="GL_INTERFACE" name="ATTRIBUTE1" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>attribute2</attribute-name>
+               <field table="GL_INTERFACE" name="ATTRIBUTE2" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>attribute3</attribute-name>
+               <field table="GL_INTERFACE" name="ATTRIBUTE3" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>attribute4</attribute-name>
+               <field table="GL_INTERFACE" name="ATTRIBUTE4" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>attribute5</attribute-name>
+               <field table="GL_INTERFACE" name="ATTRIBUTE5" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>context</attribute-name>
+               <field table="GL_INTERFACE" name="CONTEXT" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>context2</attribute-name>
+               <field table="GL_INTERFACE" name="CONTEXT2" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>context3</attribute-name>
+               <field table="GL_INTERFACE" name="CONTEXT3" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>invoiceDate</attribute-name>
+               <field table="GL_INTERFACE" name="INVOICE_DATE" xsi:type="column"/>
+               <attribute-classification>java.sql.Timestamp</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>invoiceAmount</attribute-name>
+               <field table="GL_INTERFACE" name="INVOICE_AMOUNT" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>invoiceIdentifier</attribute-name>
+               <field table="GL_INTERFACE" name="INVOICE_IDENTIFIER" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>taxCode</attribute-name>
+               <field table="GL_INTERFACE" name="TAX_CODE" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>rowid</attribute-name>
+               <properties>
+                  <property name="blackedOut">
+                     <value>true</value>
+                  </property>
+               </properties>
+               <field name="ROWID" xsi:type="column"/>
+               <attribute-classification>java.lang.Object</attribute-classification>
+            </attribute-mapping>
+         </attribute-mappings>
+         <descriptor-type>independent</descriptor-type>
+         <caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+            <always-refresh>true</always-refresh>
+         </caching>
+         <remote-caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+         </remote-caching>
+         <instantiation/>
+         <copying xsi:type="instantiation-copy-policy"/>
+         <tables>
+            <table name="GL_INTERFACE"/>
+         </tables>
+         <structure>structureName</structure>
+      </class-mapping-descriptor>
+   </class-mapping-descriptors>
+   <login xsi:type="database-login">
+      <platform-class>org.eclipse.persistence.platform.database.oracle.Oracle9Platform</platform-class>
+      <connection-url></connection-url>
+   </login>
+</object-persistence>

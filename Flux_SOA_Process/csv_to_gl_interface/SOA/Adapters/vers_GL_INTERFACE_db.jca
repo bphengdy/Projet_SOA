@@ -1,0 +1,14 @@
+<adapter-config name="vers_GL_INTERFACE" adapter="db" wsdlLocation="../WSDLs/vers_GL_INTERFACE.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="SystemConnection" location="eis/DB/SystemConnection"/>
+  <endpoint-interaction portType="vers_GL_INTERFACE_ptt" operation="insert">
+    <interaction-spec className="oracle.tip.adapter.db.DBWriteInteractionSpec">
+      <property name="DescriptorName" value="vers_GL_INTERFACE.GlInterface"/>
+      <property name="DmlType" value="insert"/>
+      <property name="MappingsMetaDataURL" value="vers_GL_INTERFACE-or-mappings.xml"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+      <property name="DetectOmissions" value="true"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>
