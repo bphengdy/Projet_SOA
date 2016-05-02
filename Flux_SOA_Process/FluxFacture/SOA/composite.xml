@@ -11,13 +11,13 @@
            xmlns:orawsp="http://schemas.oracle.com/ws/2006/01/policy"
            xmlns:ui="http://xmlns.oracle.com/soa/designer/"
            xmlns:sca-ext="http://xmlns.oracle.com/sca/1.0-ext">
-  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/ReadFile"
-          location="WSDLs/ReadFile.wsdl" importType="wsdl"/>
   <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/FluxFacture/WriteToDB"
           location="WSDLs/WriteToDB.wsdl" importType="wsdl"/>
-  <service name="ReadFile" ui:wsdlLocation="WSDLs/ReadFile.wsdl">
-    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/ReadFile#wsdl.interface(Read_ptt)"/>
-    <binding.jca config="Adapters/ReadFile_file.jca">
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/readCSV"
+          location="WSDLs/readCSV.wsdl" importType="wsdl"/>
+  <service name="readCSV" ui:wsdlLocation="WSDLs/readCSV.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/readCSV#wsdl.interface(Read_ptt)"/>
+    <binding.jca config="Adapters/readCSV_file.jca">
       <property name="useRejectedMessageRecovery" type="xs:string" many="false" override="may">true</property>
     </binding.jca>
   </service>
@@ -26,8 +26,8 @@
   <component name="TraitementFacture" version="1.1">
     <implementation.bpel src="BPEL/TraitementFacture.bpel"/>
     <componentType>
-      <service name="ReadFile" ui:wsdlLocation="WSDLs/ReadFile.wsdl">
-        <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/ReadFile#wsdl.interface(Read_ptt)"/>
+      <service name="readCSV" ui:wsdlLocation="WSDLs/readCSV.wsdl">
+        <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/readCSV#wsdl.interface(Read_ptt)"/>
       </service>
       <reference name="WriteToDB" ui:wsdlLocation="WSDLs/WriteToDB.wsdl">
         <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/FluxFacture/WriteToDB#wsdl.interface(WriteToDB_ptt)"/>
@@ -45,11 +45,11 @@
     <property name="jca.retry.maxInterval" type="xs:int" many="false" override="may">120</property>
   </reference>
   <wire>
-    <source.uri>ReadFile</source.uri>
-    <target.uri>TraitementFacture/ReadFile</target.uri>
-  </wire>
-  <wire>
     <source.uri>TraitementFacture/WriteToDB</source.uri>
     <target.uri>WriteToDB</target.uri>
+  </wire>
+  <wire>
+    <source.uri>readCSV</source.uri>
+    <target.uri>TraitementFacture/readCSV</target.uri>
   </wire>
 </composite>

@@ -3,7 +3,7 @@
   <connection-factory UIConnectionName="SystemConnection" location="eis/DB/SystemConnection"/>
   <endpoint-interaction portType="WriteToDB_ptt" operation="insert">
     <interaction-spec className="oracle.tip.adapter.db.DBWriteInteractionSpec">
-      <property name="DescriptorName" value="WriteToDB.Facture"/>
+      <property name="DescriptorName" value="WriteToDB.GlInterface"/>
       <property name="DmlType" value="insert"/>
       <property name="MappingsMetaDataURL" value="WriteToDB-or-mappings.xml"/>
       <property name="GetActiveUnitOfWork" value="false"/>

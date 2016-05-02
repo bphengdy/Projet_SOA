@@ -17,12 +17,12 @@
         <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/WriteToDB" schemaLocation="../Schemas/WriteToDB_table.xsd" />
       </schema>
     </wsdl:types>
-    <wsdl:message name="FactureCollection_msg">
-        <wsdl:part name="FactureCollection" element="top:FactureCollection"/>
+    <wsdl:message name="GlInterfaceCollection_msg">
+        <wsdl:part name="GlInterfaceCollection" element="top:GlInterfaceCollection"/>
     </wsdl:message>
     <wsdl:portType name="WriteToDB_ptt">
         <wsdl:operation name="insert">
-            <wsdl:input message="tns:FactureCollection_msg"/>
+            <wsdl:input message="tns:GlInterfaceCollection_msg"/>
         </wsdl:operation>
     </wsdl:portType>
 </wsdl:definitions>

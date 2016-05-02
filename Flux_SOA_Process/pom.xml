@@ -15,5 +15,9 @@
     	<module>Flux_Test4</module>
     	<module>Flux_Test5</module>
     	<module>FluxFacture</module>
+    	<module>csv_to_gl_interface</module>
+    	<module>csv_to_gl_interfaceReal</module>
+    	<module>testba</module>
+    	<module>csv_to_gl_interface_v2</module>
     </modules>
 </project>

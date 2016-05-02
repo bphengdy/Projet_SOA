@@ -26,6 +26,9 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="csv_to_gl_interface_v2/csv_to_gl_interface_v2.jpr"/></hash>
+      <hash><url n="URL" path="csv_to_gl_interface/csv_to_gl_interface.jpr"/></hash>
+      <hash><url n="URL" path="csv_to_gl_interfaceReal/csv_to_gl_interfaceReal.jpr"/></hash>
       <hash><url n="URL" path="Flux_Test4/Flux_Test4.jpr"/></hash>
       <hash><url n="URL" path="Flux_Test5/Flux_Test5.jpr"/></hash>
       <hash><url n="URL" path="FluxFacture/FluxFacture.jpr"/></hash>

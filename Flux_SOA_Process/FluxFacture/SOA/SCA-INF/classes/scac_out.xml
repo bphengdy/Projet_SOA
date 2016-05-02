@@ -1,13 +1,53 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <Faults>
    <Fault>
-      <severity>warning</severity>
+      <severity>error</severity>
+      <loc/>
+      <line>45</line>
+      <col/>
+      <file>BPEL/TraitementFacture.bpel</file>
+      <name>BPEL/TraitementFacture.bpel</name>
+      <fix>Make sure the WSDL messageType "{http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/ReadFile}Read_msg" is defined in one of the WSDLs referenced by the deployment descriptor</fix>
+      <msg>WSDL messageType "{http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/ReadFile}Read_msg" of variable "Receive1_Read_InputVariable" is not defined in any of the WSDL files</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>46</line>
+      <col/>
+      <file>BPEL/TraitementFacture.bpel</file>
+      <name>BPEL/TraitementFacture.bpel</name>
+      <fix>Make sure the WSDL messageType "{http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/FluxFacture/WriteToDB}FactureCollection_msg" is defined in one of the WSDLs referenced by the deployment descriptor</fix>
+      <msg>WSDL messageType "{http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/FluxFacture/WriteToDB}FactureCollection_msg" of variable "Invoke1_insert_InputVariable" is not defined in any of the WSDL files</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
       <loc/>
       <line>50</line>
       <col/>
       <file>BPEL/TraitementFacture.bpel</file>
       <name>BPEL/TraitementFacture.bpel</name>
-      <fix>Make sure that the return value of from-spec query is compatible with the to-spec query</fix>
-      <msg>&lt;from> value type "{http://www.w3.org/2001/XMLSchema}string" is not compatible with &lt;to> value type "{http://xmlns.oracle.com/pcbpel/adapter/db/top/WriteToDB}string50"</msg>
+      <fix>Make sure the correct variable is used in receive</fix>
+      <msg>messageType "{http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/ReadFile}Read_msg" of variable "Receive1_Read_InputVariable" does not match the expected 	messageType "{http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/FluxFacture/readCSV}Read_msg" in &lt;receive></msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>48</line>
+      <col/>
+      <file>BPEL/TraitementFacture.bpel</file>
+      <name>BPEL/TraitementFacture.bpel</name>
+      <fix>Remove this assign element</fix>
+      <msg>Assign activity does not have children. Empty assign is not necessary and is not supported in this version of OraBPEL PM</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line>57</line>
+      <col/>
+      <file>BPEL/TraitementFacture.bpel</file>
+      <name>BPEL/TraitementFacture.bpel</name>
+      <fix>Make sure the correct variable is used in invoke</fix>
+      <msg>messageType "{http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/FluxFacture/WriteToDB}FactureCollection_msg" of variable "Invoke1_insert_InputVariable" does not match the expected 	messageType "{http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/FluxFacture/WriteToDB}GlInterfaceCollection_msg" in &lt;invoke></msg>
    </Fault>
 </Faults>

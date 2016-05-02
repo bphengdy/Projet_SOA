@@ -1,30 +1,18 @@
-2016-03-24 09:52:58.506/3.595 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational configuration from "jar:file:/u01/fmw/soa/coherence/lib/coherence.jar!/tangosol-coherence.xml"
-2016-03-24 09:52:58.639/3.728 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational overrides from "jar:file:/u01/fmw/soa/coherence/lib/coherence.jar!/tangosol-coherence-override-dev.xml"
-2016-03-24 09:52:58.647/3.736 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/tangosol-coherence-override.xml" is not specified
-2016-03-24 09:52:58.654/3.743 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-config.xml" is not specified
-2016-03-24 09:52:58.658/3.747 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-builder-config.xml" is not specified
-2016-03-24 09:52:58.662/3.751 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/custom-mbeans.xml" is not specified
+2016-03-25 06:56:28.842/2.787 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational configuration from "jar:file:/u01/fmw/soa/coherence/lib/coherence.jar!/tangosol-coherence.xml"
+2016-03-25 06:56:28.939/2.884 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational overrides from "jar:file:/u01/fmw/soa/coherence/lib/coherence.jar!/tangosol-coherence-override-dev.xml"
+2016-03-25 06:56:28.941/2.886 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/tangosol-coherence-override.xml" is not specified
+2016-03-25 06:56:28.944/2.889 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-config.xml" is not specified
+2016-03-25 06:56:28.945/2.890 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-builder-config.xml" is not specified
+2016-03-25 06:56:28.945/2.890 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/custom-mbeans.xml" is not specified
 
 Oracle Coherence Version 12.1.3.0.0 Build 52031
  Grid Edition: Development mode
 Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
 
-2016-03-24 09:52:58.886/3.975 Oracle Coherence GE 12.1.3.0.0 <Info> (thread=main, member=n/a): Created cache factory com.tangosol.net.DefaultConfigurableCacheFactory
-Mar 24, 2016 9:52:59 AM oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+2016-03-25 06:56:29.167/3.112 Oracle Coherence GE 12.1.3.0.0 <Info> (thread=main, member=n/a): Created cache factory com.tangosol.net.DefaultConfigurableCacheFactory
+Mar 25, 2016 6:56:29 AM oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
 INFO: XMLSchema incremental build enabled.
-Mar 24, 2016 9:52:59 AM com.collaxa.cube.CubeLogger info
+Mar 25, 2016 6:56:29 AM com.collaxa.cube.CubeLogger info
 INFO: validating "BPEL/TraitementFacture.bpel" ...
-Mar 24, 2016 9:52:59 AM oracle.integration.platform.blocks.PlatformConfigurationProvider getPlatformConfigurationProvider
+Mar 25, 2016 6:56:29 AM oracle.integration.platform.blocks.PlatformConfigurationProvider getPlatformConfigurationProvider
 WARNING: JRF is unable to determine the current application server platform.
-Mar 24, 2016 9:53:00 AM com.collaxa.cube.CubeLogger info
-INFO: Composed "TraitementFacture" in 62.8 milliseconds [nodes 6=0+6, 95.5 nodes/sec]
-Mar 24, 2016 9:53:02 AM CubeProcessGenerator compile
-INFO: RegularFileObject[/home/oracle/jdeveloper/mywork/Flux_SOA_Process/FluxFacture/SOA/SCA-INF/bpel/TraitementFacture/src/orabpel/traitementfacture/L0.java] /home/oracle/jdeveloper/mywork/Flux_SOA_Process/FluxFacture/SOA/SCA-INF/bpel/TraitementFacture/src/orabpel/traitementfacture/L0.java uses unchecked or unsafe operations.
-Mar 24, 2016 9:53:02 AM CubeProcessGenerator compile
-INFO: RegularFileObject[/home/oracle/jdeveloper/mywork/Flux_SOA_Process/FluxFacture/SOA/SCA-INF/bpel/TraitementFacture/src/orabpel/traitementfacture/L0.java] Recompile with -Xlint:unchecked for details.
-Mar 24, 2016 9:53:02 AM com.collaxa.cube.CubeLogger info
-INFO: Compiled "TraitementFacture" in 1.424 seconds
-Mar 24, 2016 9:53:02 AM com.collaxa.cube.CubeLogger info
-INFO: Gathered 4 files in 0.2 milliseconds
-Mar 24, 2016 9:53:02 AM com.collaxa.cube.CubeLogger info
-INFO: Packaged "TraitementFacture" in 4.9 milliseconds
