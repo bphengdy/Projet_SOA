@@ -15,6 +15,8 @@
           location="WSDLs/fileService.wsdl" importType="wsdl"/>
   <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/csv_to_gl_interface_v2/dbReference"
           location="WSDLs/dbReference.wsdl" importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/ias/pcbpel/NotificationService"
+          location="oramds:/soa/shared/workflow/NotificationService.wsdl" importType="wsdl"/>
   <service name="fileService" ui:wsdlLocation="WSDLs/fileService.wsdl">
     <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/file/Flux_SOA_Process/csv_to_gl_interface_v2/fileService#wsdl.interface(Read_ptt)"/>
     <binding.jca config="Adapters/fileService_file.jca">
@@ -32,6 +34,9 @@
       <reference name="dbReference" ui:wsdlLocation="WSDLs/dbReference.wsdl">
         <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/db/Flux_SOA_Process/csv_to_gl_interface_v2/dbReference#wsdl.interface(dbReference_ptt)"/>
       </reference>
+      <reference name="NotificationService1" ui:wsdlLocation="oramds:/soa/shared/workflow/NotificationService.wsdl">
+        <interface.wsdl interface="http://xmlns.oracle.com/ias/pcbpel/NotificationService#wsdl.interface(NotificationService)"/>
+      </reference>
     </componentType>
     <property name="bpel.config.transaction" type="xs:string" many="false">required</property>
     <property name="bpel.config.oneWayDeliveryPolicy" type="xs:string" many="false">sync</property>
@@ -44,6 +49,11 @@
     <property name="jca.retry.backoff" type="xs:int" many="false" override="may">2</property>
     <property name="jca.retry.maxInterval" type="xs:int" many="false" override="may">120</property>
   </reference>
+  <reference name="NotificationService1" ui:wsdlLocation="oramds:/soa/shared/workflow/NotificationService.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/ias/pcbpel/NotificationService#wsdl.interface(NotificationService)"/>
+    <binding.wsif port="http://xmlns.oracle.com/ias/pcbpel/NotificationService#wsdl.endpoint(NotificationService/JavaPort)"
+                  location="oramds:/soa/shared/workflow/NotificationService.wsdl"/>
+  </reference>
   <wire>
     <source.uri>fileService</source.uri>
     <target.uri>BPELProcess1/fileService</target.uri>
@@ -51,5 +61,9 @@
   <wire>
     <source.uri>BPELProcess1/dbReference</source.uri>
     <target.uri>dbReference</target.uri>
+  </wire>
+  <wire>
+    <source.uri>BPELProcess1/NotificationService1</source.uri>
+    <target.uri>NotificationService1</target.uri>
   </wire>
 </composite>

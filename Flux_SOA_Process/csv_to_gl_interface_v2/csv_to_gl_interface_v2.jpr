@@ -66,6 +66,11 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/cepContentSet"/>
    </list>
    <value n="defaultPackage" v="csv_to_gl_interface_v2"/>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="url-path"/>
+      </hash>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="Maven"/>
@@ -286,4 +291,5 @@
    </hash>
    <value n="SCA_BPEL_FOLDER_PROPERTY_NAME" v="BPEL/"/>
    <value n="SOA_TRANSFORMATION_FOLDER_NAME" v="Transformations/"/>
+   <value n="SOA_WSDL_FOLDER_NAME" v="WSDLs/"/>
 </jpr:project>
